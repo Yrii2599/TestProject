@@ -12,7 +12,7 @@ namespace DAL.Configuration
         public static IServiceCollection AddDalConfiguration( this IServiceCollection services, IConfiguration configuration )
         {
 
-            services.AddEFCoreConfiguration(configuration);
+            services.AddEFCoreConfiguration (configuration);
             services.AddDalAutomapperConfiguration (configuration);
             services.AddDalDependencyInjection (configuration);
             return services;

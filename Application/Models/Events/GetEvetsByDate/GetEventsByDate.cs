@@ -11,7 +11,7 @@
             Date = date;
             Events = events;
         }
-        public GetEventsByDate() : this(default, default!)
+        public GetEventsByDate() : this (default, default!)
         {
 
         }

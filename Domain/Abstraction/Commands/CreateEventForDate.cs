@@ -1,6 +1,4 @@
-﻿using DAL.Models.Abstraction;
-using Domain.Abstraction.CommonHendler;
-using Domain.Agregate.Event;
+﻿using Domain.Agregate.Event;
 
 namespace Domain.Abstraction.Commands
 {

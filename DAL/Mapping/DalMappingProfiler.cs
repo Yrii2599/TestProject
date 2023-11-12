@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using DAL.Models;
 using Domain.Agregate.Event;
-using System;
 
 namespace DAL.Mapping
 {

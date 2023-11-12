@@ -21,12 +21,12 @@ namespace Domain.Agregate.Event
         }
 
         public DomainEvent()
-            : this(default, default, default!)
+            : this (default, default, default!)
         {
-            Id = Guid.NewGuid();
+            Id = Guid.NewGuid ();
         }
 
-        public static async Task<IEnumerable<DomainEvent>> GetEvents( IQuerydHendler<GetEventsForDate, IEnumerable<DomainEvent>> querydHendler, GetEventsForDate query) =>
+        public static async Task<IEnumerable<DomainEvent>> GetEvents( IQuerydHendler<GetEventsForDate, IEnumerable<DomainEvent>> querydHendler, GetEventsForDate query ) =>
             await querydHendler.Execute (query);
 
         public static async Task<IEnumerable<DomainEvent>> CreateEvents( ICommandHendler<CreateEventDomainModel, IEnumerable<DomainEvent>> commandHendler, CreateEventDomainModel query ) =>

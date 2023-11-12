@@ -14,7 +14,7 @@ namespace DAL.Services.Event.Query
 
         public IMapper Mapper { get; set; }
 
-        public GetEventByDateQueryHendler( DataBaseContext dbContext, IMapper mapper)
+        public GetEventByDateQueryHendler( DataBaseContext dbContext, IMapper mapper )
         {
             DbContext = dbContext;
             Mapper = mapper;
@@ -22,9 +22,9 @@ namespace DAL.Services.Event.Query
         public async Task<IEnumerable<DomainEvent>> Execute( GetEventsForDate command )
         {
             List<EventEntity> events = await DbContext.Events
-                .Where(e => e.Date.Year == command.Date.Year 
+                .Where (e => e.Date.Year == command.Date.Year
                 && e.Date.Month == command.Date.Month)
-                .ToListAsync();
+                .ToListAsync ();
             return Mapper.Map<List<EventEntity>, List<DomainEvent>> (events);
         }
     }

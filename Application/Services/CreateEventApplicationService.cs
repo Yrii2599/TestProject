@@ -6,7 +6,6 @@ using AutoMapper;
 using Domain.Abstraction.Commands;
 using Domain.Abstraction.CommonHendler;
 using Domain.Agregate.Event;
-using System.Linq;
 
 namespace Application.Services
 {

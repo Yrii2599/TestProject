@@ -7,7 +7,7 @@ namespace DAL.Context
     {
         public DbSet<EventEntity> Events { get; set; }
 
-        public DataBaseContext( DbContextOptions<DataBaseContext> options ) : base (options) 
+        public DataBaseContext( DbContextOptions<DataBaseContext> options ) : base (options)
         { }
     }
 }

@@ -32,10 +32,10 @@ namespace API.Controllers
 
 
         [HttpPost]
-        public async Task<ActionResult> CreateEvents( [FromBody] CreateEventsByDate model)
+        public async Task<ActionResult> CreateEvents( [FromBody] CreateEventsByDate model )
         {
             IEnumerable<GetEventsByDate> events = await CreateEventService.CreateEvents (model);
-            return Created("", events);
+            return Created ("", events);
         }
     }
 }

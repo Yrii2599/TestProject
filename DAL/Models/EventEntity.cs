@@ -6,7 +6,7 @@ namespace DAL.Models
     {
         public Guid Id { get; set; }
 
-        public DateOnly Date{ get; set; }
+        public DateOnly Date { get; set; }
 
         public string? Title { get; set; }
 
@@ -17,7 +17,7 @@ namespace DAL.Models
             Title = title;
         }
         public EventEntity() :
-            this(default, default, default!)
+            this (default, default, default!)
         {
 
         }

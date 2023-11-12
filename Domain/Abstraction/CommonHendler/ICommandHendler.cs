@@ -1,9 +1,7 @@
-﻿using DAL.Models.Abstraction;
-
-namespace Domain.Abstraction.CommonHendler
+﻿namespace Domain.Abstraction.CommonHendler
 {
     public interface ICommandHendler<TCommand, ToutModel> where TCommand : ICreateRepositoryCommand
     {
-        Task<ToutModel> Execute(TCommand command);
+        Task<ToutModel> Execute( TCommand command );
     }
 }

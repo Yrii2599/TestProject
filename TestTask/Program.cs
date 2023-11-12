@@ -1,8 +1,6 @@
 using APIConfiguration.Configuration.Swagger;
-using Application;
 using Application.Configuration;
 using DAL.Configuration;
-using Domain;
 
 var builder = WebApplication.CreateBuilder (args);
 

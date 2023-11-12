@@ -4,7 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Application.Configuration
 {
-    public static  class ApplicationConfiguration
+    public static class ApplicationConfiguration
     {
         public static IServiceCollection AddApplicationConfiguration( this IServiceCollection services, IConfiguration configuration )
         {

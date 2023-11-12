@@ -4,6 +4,6 @@ namespace Application.Services.Abstraction
 {
     public interface IGetEventApplicationService
     {
-        Task<IEnumerable<GetEventsByDate>> GetEventsByDate(DateOnly date);
+        Task<IEnumerable<GetEventsByDate>> GetEventsByDate( DateOnly date );
     }
 }

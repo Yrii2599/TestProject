@@ -23,10 +23,10 @@ namespace DAL.Services.Event.Command
             IEnumerable<EventEntity> events = Mapper.Map<IEnumerable<DomainEvent>, IEnumerable<EventEntity>> (command.Events);
             events.Select (e => e.Date = command.Date).ToList ();
 
-            await DbContext.Events.AddRangeAsync(events);
+            await DbContext.Events.AddRangeAsync (events);
             await DbContext.SaveChangesAsync ();
 
-            return Mapper.Map<List<EventEntity>, List<DomainEvent>> (events.ToList());
+            return Mapper.Map<List<EventEntity>, List<DomainEvent>> (events.ToList ());
         }
     }
 }

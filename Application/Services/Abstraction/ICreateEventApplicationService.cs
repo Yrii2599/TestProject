@@ -5,6 +5,6 @@ namespace Application.Services.Abstraction
 {
     public interface ICreateEventApplicationService
     {
-        Task<IEnumerable<GetEventsByDate>> CreateEvents( CreateEventsByDate createEventModel);
+        Task<IEnumerable<GetEventsByDate>> CreateEvents( CreateEventsByDate createEventModel );
     }
 }

@@ -14,7 +14,7 @@ namespace APIConfiguration.Configuration.Swagger
             return services;
         }
 
-        public static IApplicationBuilder UseSwaggerImpl( this IApplicationBuilder app)
+        public static IApplicationBuilder UseSwaggerImpl( this IApplicationBuilder app )
         {
             app.UseSwagger ();
             app.UseSwaggerUI (options =>

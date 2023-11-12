@@ -12,7 +12,7 @@ namespace Application.Services
     {
         public IQuerydHendler<GetEventsForDate, IEnumerable<DomainEvent>> QuerydHendler { get; set; }
         public IMapper Mapper { get; set; }
-        
+
         public GetEventsByDateApplicationService( IQuerydHendler<GetEventsForDate, IEnumerable<DomainEvent>> querydHendler,
             IMapper mapper )
         {
@@ -22,11 +22,11 @@ namespace Application.Services
 
         public async Task<IEnumerable<GetEventsByDate>> GetEventsByDate( DateOnly date )
         {
-            IEnumerable<DomainEvent> events = await DomainEvent.GetEvents (QuerydHendler, new GetEventsForDate(date));
-            return  events
+            IEnumerable<DomainEvent> events = await DomainEvent.GetEvents (QuerydHendler, new GetEventsForDate (date));
+            return events
                 .GroupBy (e => e.Date)
                 .ToList ()
-                    .Select(e => new GetEventsByDate (e.Key, Mapper.Map<List<DomainEvent>, List<Event>>(e.Select(c=>c).ToList())));
+                    .Select (e => new GetEventsByDate (e.Key, Mapper.Map<List<DomainEvent>, List<Event>> (e.Select (c => c).ToList ())));
         }
     }
 }

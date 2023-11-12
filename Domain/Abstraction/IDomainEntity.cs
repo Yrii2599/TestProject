@@ -2,6 +2,6 @@
 {
     public interface IDomainEntity
     {
-        public Guid Id { get;}
+        public Guid Id { get; }
     }
 }

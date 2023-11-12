@@ -1,5 +1,4 @@
-﻿using DAL.Mapping;
-using DAL.Services.Event.Command;
+﻿using DAL.Services.Event.Command;
 using DAL.Services.Event.Query;
 using Domain.Abstraction.Commands;
 using Domain.Abstraction.CommonHendler;
